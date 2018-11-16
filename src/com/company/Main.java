@@ -66,15 +66,24 @@ public class Main {
         y = scanner.nextDouble();
         System.out.print("Введите x: ");
         x = scanner.nextDouble();
-        one = ((b + Math.sqrt(Math.pow(b, 2) + 4 * a * c)) / (2 * a)) + (Math.pow(a, 3) * c) + Math.pow(b, -2);
-        two= Math.pow(x, 2)+ Math.pow(x, 3);
-        three= x - (Math.pow(x, 3)/3+ Math.pow(x, 5)/5);
-        four = ((x+y)/(y+1))-((x*y-12)/(34+x));
-        five = Math.sin(Math.sqrt(x+1))-Math.sin(Math.sqrt(x-1));
-        System.out.println("one= "+one);
-        System.out.println("two= "+two);
-        System.out.println("three= "+three);
-        System.out.println("four= "+four);
-        System.out.println("five= "+five);
+        // например, проверка на 0 в знаменателе
+        if (a == 0)
+        {
+            System.out.println("Нет решений");
+        }
+        else
+        {
+            one = ((b + Math.sqrt(Math.pow(b, 2) + 4 * a * c)) / (2 * a)) + (Math.pow(a, 3) * c) + Math.pow(b, -2);
+            two= Math.pow(x, 2)+ Math.pow(x, 3);
+            three= x - (Math.pow(x, 3)/3+ Math.pow(x, 5)/5);
+            four = ((x+y)/(y+1))-((x*y-12)/(34+x));
+            five = Math.sin(Math.sqrt(x+1))-Math.sin(Math.sqrt(x-1));
+            System.out.println("one= "+one);
+            System.out.println("two= "+two);
+            System.out.println("three= "+three);
+            System.out.println("four= "+four);
+            System.out.println("five= "+five);
+        }
+            
     }
 }
